@@ -1,0 +1,215 @@
+@charset "utf-8";
+
+/* ************************************************************************************************************************************************************
+						《 setting.css 》
+************************************************************************************************************************************************************ */
+
+/* ------------------------------ [ Font ] ------------------------------------------------------------------------------------------ */
+
+/* Pretendard */
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src:local(※),url('../font/Pretendard-ExtraBold.eot');
+	src:url('../font/Pretendard-ExtraBold.woff') format('woff2'),
+		url('../font/Pretendard-ExtraBold.woff2') format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src:local(※),url('../font/Pretendard-Bold.eot');
+	src:url('../font/Pretendard-Bold.woff2') format('woff2'),
+		url('../font/Pretendard-Bold.woff') format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 600;
+	font-display: swap;
+	src:local(※),url('../font/Pretendard-SemiBold.eot');
+	src:url('../font/Pretendard-SemiBold.woff2') format('woff2'),
+		url('../font/Pretendard-SemiBold.woff') format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src:local(※),url('../font/Pretendard-Medium.eot');
+	src:url('../font/Pretendard-Medium.woff2') format('woff2'),
+		url('../font/Pretendard-Medium.woff') format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src:local(※),url('../font/Pretendard-Regular.eot');
+	src:url('../font/Pretendard-Regular.woff2') format('woff2'),
+		url('../font/Pretendard-Regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src:local(※),url('../font/Pretendard-Light.eot');
+	src:url('../font/Pretendard-Light.woff2') format('woff2'),
+		url('../font/Pretendard-Light.woff') format('woff');
+}
+
+/* 조선일보명조체 */
+@font-face {
+	font-family: 'ChosunNm';
+	font-weight: normal;
+	font-display: swap;
+	src:url('https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.woff2') format('woff2'),
+		url('https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.woff') format('woff');
+}
+
+/* ------------------------------ [ Layout Reset ] ------------------------------------------------------------------------------------------ */
+html,body {font-size:10px;}
+
+/* Reset */
+html,body,div,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+abbr,address,big,cite,code,del,dfn,font,figure,figcaption,img,ins,q,s,samp,small,strike,sub,sup,tt,var,
+b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+	color:#333333;
+	margin:0;
+	padding:0;
+}
+html,body,div,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+abbr,address,big,cite,code,del,dfn,font,figure,figcaption,img,ins,q,s,samp,small,strike,sub,sup,tt,var,
+b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {font-weight:400; line-height:1.2em; font-family:'Pretendard',sans-serif;}
+button,input,textarea {font-weight:400; line-height:1.2em; font-family:'Pretendard', '나눔고딕','맑은고딕','돋움',sans-serif;}
+select {font-weight:400; line-height:1.2em; font-family:'Pretendard', '나눔고딕','맑은고딕','돋움',sans-serif;}
+button,input,textarea {
+	-webkit-text-size-adjust:none;
+	-webkit-appearance:none;
+	-webkit-border-radius:0;
+	border:none;
+	border-radius:0;
+	margin:0;
+	padding:0;
+}
+button {
+	background:none;
+	border:none;
+	color:inherit;
+	cursor:pointer;
+}
+button:disabled {
+	cursor:default;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+	table-layout:fixed;
+	width:100%;
+}
+select {
+	background-color:transparent;
+	border:none;
+	letter-spacing:inherit;
+	appearance:none;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-webkit-font-smoothing:antialiased;
+	border:none;
+	border-radius:0;
+	margin:0;
+	padding:0;
+}
+select::-ms-expand {
+	display:none; /* 화살표 없애기 for IE10, 11 */
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style:normal;
+}
+ul,li,ol {
+	list-style-type:none;
+}
+hr {
+	display:none;
+}
+legend {
+	overflow:hidden;
+	visibility:hidden;
+	position:absolute;
+	font-size:0;
+	line-height:0;
+	height:0;
+	z-index:-1;
+}
+a,a:active,input:active,button:active,select:active,label:active,
+a:focus,input:focus,button:focus,select:focus,label:focus {
+	text-decoration:none;
+}
+a,span,em,strong {
+	color:inherit;
+	font:inherit;
+	border:0;
+	margin:0;
+	padding:0;
+	-webkit-font-smoothing:antialiased;
+}
+a,input,button,select,label {
+	-webkit-tap-highlight-color:transparent;
+}
+::-webkit-input-placeholder {
+	color:#757575;
+	font:inherit;
+	line-height:inherit;
+}
+input:disabled::-webkit-input-placeholder {
+	color:#757575;
+}
+:-moz-placeholder {
+	color:#757575;
+	font:inherit;
+	line-height:inherit;
+}
+input:disabled:-moz-placeholder {
+	color:#757575;
+}
+::-moz-placeholder {
+	color:#757575;
+	font:inherit;
+	line-height:inherit;
+}
+input:disabled::-moz-placeholder {
+	color:#757575;
+}
+:-ms-input-placeholder {
+	color:#757575;
+	font:inherit;
+	line-height:inherit;
+}
+input:disabled:-ms-input-placeholder {
+	color:#757575;
+}
+textarea::placeholder {
+	color:#757575;
+}
+textarea::-webkit-placeholder {
+	color:#757575;
+}
+textarea::-moz-placeholder {
+	color:#757575;
+}
+textarea::-ms-placeholder {
+	color:#757575;
+}
+.blind {
+	overflow:hidden;
+	font-size:0;
+	line-height:0;
+	position:absolute;
+	height:0;
+	width:0;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	box-shadow:0 0 0px 1000px #fff inset;
+	transition:background-color 5000s ease-in-out 0s;
+}
